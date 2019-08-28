@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "a11132d6-fb75-44b8-b392-7626cb9239f2",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Car By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/car/123",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Driver",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/driver/1605",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"driver",
+						"1605"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Trip By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/trip/20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trip",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Penalty By Driver ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/penalty/driver/1605",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"penalty",
+						"driver",
+						"1605"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Penalty By Trip ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/penalty/trip/20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"penalty",
+						"trip",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Penalties By Trip ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/penalty/count_by_trip/20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"penalty",
+						"count_by_trip",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Penalties By Driver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/penalty/count_by_driver/1605",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"penalty",
+						"count_by_driver",
+						"1605"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"model\": \"BMW\",\n\t\"build\": \"2020\",\n\t\"carRegNo\": \"12345\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/car",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startPoint\": {\n        \"longitude\": 34.690571,\n        \"latitude\": 33.035933\n    },\n    \"endPoint\": {\n        \"longitude\": 34.70154,\n        \"latitude\": 33.060722\n    },\n    \"start\": \"2018-01-01\",\n    \"driver\": 1605,\n    \"tripId\": 20\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/trip",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Driver",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"John\",\n\t\"lastName\": \"Test\",\n\t\"idNo\" : 1605\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/driver",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Penalty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"driver\" : 9090,\n    \"tripId\": 1,\n    \"speed\": 1111,\n    \"penaltyPoints\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/penalty",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"penalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"build\" : \"2044\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/car/123",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Trip By ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"startPoint\": {\n        \"longitude\": 34.690571,\n        \"latitude\": 33.035933\n    },\n    \"endPoint\": {\n        \"longitude\": 34.690571,\n        \"latitude\": 33.035933\n    },\n    \"tripId\": 20,\n    \"driver\": 1605\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/trip/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trip",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Driver By ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Green\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/driver/1605",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"driver",
+						"1605"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unassign Car From Driver",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idNo\": 1605 \n}"
+				},
+				"url": {
+					"raw": "localhost:3000/driver/unassign",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"driver",
+						"unassign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Car To Driver",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idNo\": 1605,\n    \"carRegNo\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/driver/assign/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"driver",
+						"assign",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/car/12345",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Trip By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/trip/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"trip",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Driver",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/driver/1015",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"driver",
+						"1015"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
